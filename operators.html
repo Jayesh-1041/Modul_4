@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        a = 20;
+        b = 10;
+        c = a;
+        d = '10';
+        e = true;
+
+
+        // assignment operator
+        // =
+        a = 20;
+        b = 10;
+        c = a;
+        console.log(c);      20
+
+
+        // equality operator
+        // ==
+        a = 20;
+        b = 10;
+        c = a;
+        d = '10';
+        console.log(a == b); false
+        console.log(a == c); true 
+        console.log(a == d); false
+        console.log(b == d); true
+
+        // strict equality operator
+        // ===
+        a = 20;
+        b = 10;
+        c = a;
+        d = '10';
+        console.log(b === d);  false
+        console.log(c === a);  true
+        console.log(a === b);  false
+
+        // typeof
+        console.log(typeof a);  Number
+        console.log(typeof d);  String
+
+        // arithmetic operators
+        // addition         (+)
+        // substraction     (-)
+        // multiplication   (*)
+        // divition         (/)
+        // module           (%) 
+        a = 20;
+        b = 10;
+        c = a;
+        d = '10';
+        console.log(a + b);
+        console.log(b - a);
+        console.log(c - a);
+        console.log(c * a);
+        console.log(c / b);
+        console.log(b % c);
+
+        // boolean operator
+        // true
+        // false
+        e = true;
+        console.log(e == true);
+        console.log(e == false);
+
+        // logical operator
+        // AND  (&&)    returns true if all true
+        // OR   (||)    returns true if any true
+        // NOT  (!)     returns true if false, returns false if true
+        a = 20;
+        b = 10;
+        c = a;
+        d = '10';
+
+        console.log(a == b && a == c && d == a);
+        console.log(a == b || a == c || d == a);
+        console.log(!(a == b) && a == c && !(a == d));
+
+        // ternary operator
+        // (condition)?code:code a==10? do this: do that
+        a = 10
+        a==10?console.log('A is 10'): console.log('A is not 10');
+
+
+        // Comparison operator
+        // greater than (>) 
+        // less than (<)
+        // greater than equal to (>=)
+        // less than equal to (<=) 
+        // not equal to (<=)
+        a = 20;
+        b = 10;
+        c = a;
+        console.log(a > b);     true
+        console.log(a > 21);    false
+        console.log(a > 19);    true
+
+        console.log(b < a);     true
+        console.log(c <= a);    true
+        console.log(a >= 20);   true
+        console.log(a == b);    false
+
+        console.log(a != 10);   true
+        console.log(!(a == 10)); true
+
+
+
+    </script>
+</body>
+</html>
