@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // b = 10;
+        // c = ['x', 'y', 'z'];
+        // a = ['a', 10, b, c];
+
+        // console.log(a);
+        // console.log(a[3][1]);
+
+        let names = ['jayesh', 'Navsad', 'Vimal', 'Sanjay', 'Bhavesh', 'Dhiraj', 'Vimal','Ajay','Jay','Bharat'];
+        console.log(names[0]);
+
+
+        indexOfFriend = names.indexOf('Vimal', 3);
+
+        console.log(indexOfFriend);
+        console.log(names[indexOfFriend]);
+
+        // console.log(names);
+        // names.pop();
+        // console.log(names);
+
+        // console.log(names);
+        // names.push('vivek','divyesh');
+        // console.log(names);
+
+        // console.log(names);
+        // names.shift();
+        // console.log(names);
+
+        // console.log(names);
+        // names.unshift('chirag', 'Bhupat');
+        // console.log(names);
+
+        // names.pop();
+        // console.log(names);
+
+        let nameCount = names.length;
+        console.log(nameCount);
+        console.log(names[nameCount -2]);
+
+
+        joinedArray = names.join(',. ');
+        console.log(names);
+        console.log(joinedArray);
+
+
+        console.log(names);
+        slicedArray = names.slice(1, names.length -2);
+        console.log(slicedArray);
+
+        console.log(names);
+        names.splice(3, 3, 'naman','nirav','kesur');
+        console.log(names);
+
+
+
+    </script>
+</body>
+</html>

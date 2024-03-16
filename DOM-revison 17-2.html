@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #parent {
+        width: 500px;
+        height: 500px;
+        background-color: bisque;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .child {
+        width: 300px;
+        height: 300px;
+        background-color: violet;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      button {
+        /* width: 100px;
+        height: 100px; */
+        /* background-color: yellowgreen; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* font-size: 1.5rem;
+        color: whitesmoke; */
+        /* border: none; */
+      }
+
+      .child button {
+        color: red;
+      }
+      #zoom {
+        background-color: whitesmoke;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="zoom">
+      <div id="parent">
+        <div class="child">
+          <button>Click here</button>
+          <button>vimal</button>
+          <button>navasad</button>
+        </div>
+        <!-- <div class="child">child2</div>
+        <div class="child">child3</div>
+        <div class="child">child4</div>
+        <div class="child"><button>Click here</button></div> -->
+      </div>
+    </section>
+
+    <script>
+      //   let subChild = document.getElementsByTagName('button')[0];
+      //   let child = document.getElementsByClassName('child')[0];
+      //   let parent = document.getElementById('parent');
+
+      let section = document.getElementById('zoom');
+      let parent = document.getElementById('parent');
+      let child = document.getElementsByClassName('child')[0];
+      let button = document.getElementsByTagName('button')[0];
+
+      let vimalBtn = document.querySelector('.child button:nth-child(2)');
+      //   let button2 = document.querySelector('.child button');
+      //   let button3 = document.querySelectorAll('.child button')[0];
+
+      let newEleb = document.createElement('b');
+      let newElep = document.createElement('p');
+      newEleb.innerText = 'Navsad';
+      newElep.innerText = 'Chirag';
+      newEleb.setAttribute('class', 'color-red');
+      newElep.setAttribute('class', 'color-blue');
+      newEleb.classList.add('jayesh');
+      newElep.classList.add('jayesh2');
+      newEleb.classList.remove('jayesh');
+
+      parent.append(newEleb);
+      parent.append(newElep);
+
+      console.log(zoom);
+      console.log(parent);
+      console.log(child);
+      console.log(button);
+      console.log(vimalBtn);
+
+      //   console.log(button2);
+      //   console.log(button3);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card-maker-with-function</title>
+    <style>
+        body{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .card{
+            width: 300px;
+            border-radius: 12px;
+            margin: 10px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            transition: all 300ms;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+
+        .card:hover{
+            transform: translateY(-10px);
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        }
+
+        .card-info{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img{
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            outline: 2px solid black;
+            outline-offset: 3px;
+            object-fit: cover;
+        }
+
+        .name{
+            font-size: 1.3rem;
+            color: black;
+        }
+
+        .country{
+            font-size: 1.3rem;
+            color: black;
+        }
+
+        .profession{
+            color: rgb(165, 44, 44);
+        }
+
+        .msg-btn, .following-btn{
+            padding: 3px 5px;
+            border-radius: 5px;
+        }
+
+        .skills-container{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            background-color: rgb(102, 96, 87);
+            padding: 20px 10px;
+        }
+
+        .skill-pill{
+            border: 1px solid whitesmoke;
+            border-radius: 5px;
+            padding: 3px 20px;
+            color: whitesmoke;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- <div class="card">
+        <div class="card-info">
+            <img src="https://c.stocksy.com/a/dTW500/z9/1316485.jpg" alt="">
+            <div class="name">Jayesh</div>
+            <div class="country">India</div>
+            <div class="profession">Front End</div>
+            <div class="btns">
+                <div class="msg-btn">Message</div>
+                <div class="following">Following</div>
+            </div>
+        </div>
+        <div class="skills-container">
+            <div class="skill-pill">HTML</div>
+            <div class="skill-pill">CSS</div>
+            <div class="skill-pill">JavaScript</div>
+            <div class="skill-pill">Jquery</div>
+            <div class="skill-pill">Bootstrap</div>
+            <div class="skill-pill">React</div>
+        </div>
+    </div> -->
+
+    <script>
+
+      let body = document.getElementsByTagName('body')[0];
+        let cardTemplate = `<div class="card-info">
+        <img
+          src="https://i.pinimg.com/236x/3a/db/f1/3adbf1ef7c4d02edf08d27765d6b5704.jpg"
+          alt=""
+        />
+        <div class="name">Jayesh</div>
+        <div class="country">India</div>
+        <div class="profession">Front End</div>
+        <div class="btns">
+          <div class="msg-btn">Message</div>
+          <div class="following-btn">Following</div>
+        </div>
+      </div>
+      <div class="skills-container">
+        <div class="skill-pill">HTML</div>
+        <div class="skill-pill">CSS</div>
+        <div class="skill-pill">Javascript</div>
+        <div class="skill-pill">jQuery</div>
+        <div class="skill-pill">Bootstrap</div>
+        <div class="skill-pill">React</div>
+      </div>`;
+
+
+        newCard = document.creatElement('div');
+        newCard = document.createElement('div');
+        newCard.classList.add('card');
+        newCard.innerHTML = cardTemplate;
+
+        //   console.log(card);
+        body.append(newCard);
+    
+    </script>
+</body>
+</html>

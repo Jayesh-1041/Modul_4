@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        navsadAge = 18;
+        isNavsadWearingGlasses = true;
+
+
+        if (navsadAge >= 18) {
+            if (navsadAge >= 50 && navsadAge < 70){
+                if (navsadWearingGlasses = true){
+                    console.log('Navsad need to give medical certificate');
+                }else{
+                    console.log('Navsad need to new license');
+                }
+            } else if (navsadAge >= 70){
+                console.log('Bhai gadi chalavvanu muki do');
+            } else {
+                console.log ('Navsad can gat license');
+            }
+        } else {
+            console.log('Navsad can not get Licevnse');
+        }
+
+
+        isBusCanceled = false;
+        isBusOnTime = false;
+        isBotadBusComing = true;
+        isSarangpurBusComing = false;
+        areYouWaitingMoreThan30Minutes = false;
+
+
+        if (isBusCanceled == true){
+            if (isBotadBusComing == true){
+                console.log('Botad vadi bus ni rah jovo');
+            } else if (isSarangpurBusComing == true){
+                console.log('sarangpur vadi bus ni rah jovo');
+            } else {
+                console.log('Biji koi bus goto');
+            }
+        } else {
+            if (isBusOnTime == true){
+                console.log('Bus ms chadi jav');
+            } else if ( areYouWaitingMoreThan30Minutes == true){
+                console.log('sir ne inform kari do');
+            } else {
+                console.log ('Bus ni rah jovo');
+            }
+        }
+
+
+        isLoggedIn = true;
+        isUserHaveSufficientBalance = true;
+        isUserHasDiscountCoupon = false;
+
+
+        if (isLoggedIn == true){
+            if (isUserHaveSufficientBalance == true){
+                if (isUserHasDiscountCoupon){
+                    console.log('You will be rewarded with discount');
+                } else {
+                    console.log('You can purchase your goods');
+                }
+            }else {
+                console.log('Add money to your wallet');
+            }
+        } else{
+            console.log('Register your self');
+        }
+
+    </script>
+</body>
+</html>

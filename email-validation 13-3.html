@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="email" name="" id="email" />
+    <button>Submit</button>
+    <button>Go</button>
+    <script>
+
+      document.getElementsByTagName('button')[0]
+      .addEventListener('click', (event) => {
+        // event.preventDefault();
+        let emailValue = document.getElementById('email').value; 
+        checkEmail(emailValue);
+      });
+
+      document.getElementsByTagName('button')[1]
+      .addEventListener('click', (event) => {
+        let inputValue = document.getElementsByTagName('input')[0].value;
+        checkEmail(inputValue);
+      });
+
+
+      function checkEmail(emailval) {
+        console.log(
+          emailval.includes('@') &&
+          emailval.includes('.') &&
+          !emailval.includes('@.') &&
+          emailval.slice(0, emailval.indexOf('@')) !='' &&
+          emailval.slice(emailval.indexOf('.') + 1) !=''
+
+          // emailval.slice(emailval.indexOf('.') + emailval.length) !=''
+        );
+      }
+
+
+// ---------indexof--------------
+
+      // function checkEmail(emailval) {
+      //   positionOfAt = emailval.indexOf('@');
+      //   console.log('positionOfAt:', positionOfAt);
+
+      //   charactersBeforeAt = emailval.slice(0, positionOfAt);
+      //   console.log('charactersBeforeAt:', charactersBeforeAt);
+
+      //   isCharactersBeforeAtIsEmpty = charactersBeforeAt != '';
+      //   console.log('isCharactersBeforeAtIsEmpty;', isCharactersBeforeAtIsEmpty);
+
+      // }
+
+// --------------------------------
+     
+
+        // console.log(
+        //   inputValue.includes('@') &&
+        //   inputValue.includes('.') &&
+        //   !inputValue.includes('@.') 
+        // )
+     
+
+        // let isAtAvailable = false;
+        // let isDotAvailable = false;
+        // let AreDotAndAtNotTogether = false;
+
+        // console.log(emailval.charAt(1));
+
+        // charsBeforeAt = emailval.slice(0, emailval.indexOf('@'));
+        // charsAfterDot = emailval.slice(emailval.indexOf('.') + 1);
+
+        // for (i = 0; i < emailval.length; i++) {
+        //   if (emailval[i] == '@') {
+        //     isAtAvailable = true;
+        //   }
+        // }
+        // for (i = 0; i < emailval.length; i++) {
+        //   if (emailval[i] == '.') {
+        //     isDotAvailable = true;
+        //   }
+        // }
+
+        // for (i = 0; i < emailval.length; i++) {
+        //   console.log(emailval[i] + emailval[i + 1] == '@.');
+        //   //     if (emailval[i] + emailval[i + 1] == '@.') {
+
+        //   //     // AreDotAndAtNotTogether = true;
+        //   //   }
+        // }
+        // console.log(isAtAvailable);
+        // console.log(isDotAvailable);
+        // console.log(AreDotAndAtNotTogether);
+      // }
+    </script>
+  </body>
+</html>
+
+<!-- It must have @ -->
+<!-- It must have . -->
+<!-- It must not have @. -->

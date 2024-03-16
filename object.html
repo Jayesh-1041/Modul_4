@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        a = 10;
+        jayDataArray = [
+            'jay',
+            '23',
+            '8141929301',
+            'frontEnd',
+            '1,00,000',
+            '23',
+        ];
+        console.log(jayDataArray[2]);
+
+        jayDataObject = {
+            hoby: 'coding',
+            phone: '8141929301',
+            name: 'Jay',
+            age: '23',
+            post: 'frontEnd',
+            salary:'1,00,000',
+            followers:['jayesh', 'Dhiraj','Bhavesh','Vivek','Naman','Nirav','Bhagavan'],
+                pet:{
+                name: 'simba',
+                age: '5',
+                bread: 'bulldog',
+                friends:[
+                    {
+                        name: 'buffa',
+                        age: 3,
+                        bread: 'labra',
+                    },
+                    {
+                        name:'joy',
+                        age:7,
+                        bread:'greman shepherd',
+                    },
+                    {
+                        name:'lily',
+                        age:'2',
+                        bread:'Bichon frise',
+                    },
+                ],
+            },
+            isStudent: false,
+        };
+
+        
+        console.log(jayDataObject.pet.friends[2].name);
+
+
+        // keys
+
+        let keys = Object.keys(jayDataObject);
+        console.log(keys);
+
+        let values = Object.values(jayDataObject);
+        console.log(values);
+
+        let entries = Object.entries(jayDataObject);
+        console.log(entries);
+
+    </script>
+</body>
+</html>

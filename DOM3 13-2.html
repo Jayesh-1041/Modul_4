@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .navsad {
+        background-color: aqua;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <button>Submit</button>
+    <button class="reset-btn-class this that">Reset</button>
+    <button id="send-btn-id">Send</button>
+    <script>
+      let submitBtn = document.getElementsByTagName('button')[0];
+      let resetBtn = document.getElementsByClassName('reset-btn-class')[0];
+      let sendBtn = document.getElementById('send-btn-id');
+      //   submitBtn.innerText = 'Jayesh';
+      submitBtn.innerHTML = '<u> Jayesh</u>';
+
+      //   submitBtn.style.color = 'red';
+      //   submitBtn.style.width = '200px';
+      //   submitBtn.style.backgroundColor = 'grey';
+
+      //   submitBtn.style.cssText = 'color:red;width:200px;background-color:grey';
+
+      //   console.log(submitBtn);
+
+      console.log(resetBtn);
+      //   console.log(resetBtn.classList);
+      resetBtn.classList.add('navsad');
+      console.log(resetBtn.classList.contains('navsad'));
+      resetBtn.classList.remove('navsad');
+
+      submitBtn.addEventListener('click', function () {
+        // if (resetBtn.classList.contains('navsad')) {
+        //   resetBtn.classList.remove('navsad');
+        // } else {
+        //   resetBtn.classList.add('navsad');
+        // }
+        resetBtn.classList.toggle('navsad');
+      });
+      console.log(sendBtn);
+
+      sendBtn.setAttribute('class', 'navsad');
+      console.log(sendBtn.getAttribute('class'));
+
+      //   sendBtn.removeAttribute('class');
+    </script>
+  </body>
+</html>
