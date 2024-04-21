@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Object</title>
+</head>
+<body>
+    <script>
+
+        // function foo(){
+        //     console.log('inside foo()');
+        // }
+        // foo();
+
+
+
+        // --------------------------
+        class Car {
+
+        // class properties
+            name = 'Tata';
+            brandName = 'Harrier';
+
+            // constructor function
+            constructor(owner, name, brandName){
+                this.owner = owner;
+                this.name = name;
+                this.brandName = brandName;
+            }
+
+
+        // class method
+            giveBrandName() {
+                // console.log(name);
+                return this.name;
+            }
+            printOwnerWithCarName(){
+            return `${this.owner} has ${this.brandName} of ${this.name} company.`;
+        }
+
+        }
+
+// *****************************
+        // let car1 = new Car('Tata', 'harrier');
+        // let car2 = new Car('Mahindra', 'thar');
+        // let car3 = new Car('Toyota', 'fortuner');
+
+
+        // console.log(car1.name);
+        // console.log(car2.name);
+        // console.log(car3.name());
+
+//***************************** 
+
+
+        let car1 = new Car('jayesh', 'Tata', 'harrier');
+        let car2 = new Car('Dhiraj', 'Mahindra', 'thar');
+        let car3 = new Car('Vivek', 'Toyota', 'fortuner');
+
+        console.log(car1.printOwnerWithCarName());
+        console.log(car2.printOwnerWithCarName());
+        console.log(car3.printOwnerWithCarName());
+
+
+
+        //-------------------------------
+        class Card {
+            constructor(username, profession, imgUrl, skills, location) {
+                this.username = username;
+                this.profession = profession;
+                this.imgUrl = imgUrl;
+                this.skills = skills;
+                this.location = location;
+            }
+          
+        generateCardWithFirstStyle() {
+          return 'style1';
+        }
+        generateCardWithSecondStyle() {
+          return 'style2';
+        }
+        generateCardWithThirdStyle() {
+          return 'style3';
+        }
+    }
+
+        let jayesh = new Card(
+            'Jayesh',
+            'Front-End',
+            'https://c.stocksy.com/a/dTW500/z9/1316485.jpg',
+            ['HTML', 'CSS', 'JavaScript', 'C', 'C++', 'React'],
+            'Gir-Somanath'
+        )
+
+        console.log(jayesh.generateCardWithFirstStyle());
+        console.log(jayesh.generateCardWithSecondStyle());
+        console.log(jayesh.generateCardWithThirdStyle());
+
+      console.log(document.getElementsByTagName('body'));
+    
+      
+
+
+    </script>
+</body>
+</html>

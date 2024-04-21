@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box">This is some random text</div>
+    <button>Submit</button>
+    <script>
+      let submitBtn = document.getElementsByTagName('button')[0];
+      let box = document.getElementsByClassName('box')[0];
+
+      submitBtn.addEventListener('click', function () {
+        box.style.color = 'brown';
+        box.style.width = '200px';
+      });
+      submitBtn.addEventListener('dblclick', function () {
+        box.style.color = 'red';
+        box.style.backgroundColor = 'grey';
+      });
+      //   submitBtn.addEventListener('mouseover', function () {
+      //     box.style.color = 'blue';
+      //   });
+      //   submitBtn.addEventListener('mouseleave', function () {
+      //     box.style.color = 'black';
+      //   });
+      submitBtn.addEventListener('focus', function () {
+        box.style.fontSize = '2rem';
+      });
+
+      document.addEventListener('keydown', function (event) {
+        console.log(event.key);
+      });
+      submitBtn.addEventListener('blur', function (event) {
+        console.log('Im blurred');
+      });
+
+      submitBtn.onmouseover = function () {
+        console.log('Submit btn hovered');
+      };
+    </script>
+  </body>
+</html>
+
+<!-- click -->
+<!-- mouseover -->
+<!-- mouseleave -->
+<!-- keypress -->
+<!-- keypdown -->
+<!-- focus -->

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigator Object</title>
+</head>
+<body>
+    <button>Click</button>
+    <script>
+
+document
+        .getElementsByTagName('button')[0]
+        .addEventListener('click', () => {
+          console.log(window);
+            readClipBoardText();
+          getCurrentLocation();
+        });
+
+      function readClipBoardText() {
+        window.navigator.clipboard
+          .readText()
+          .then((response) => console.dir(response))
+          .catch((err) => console.log(err));
+      }
+
+
+
+      setInterval(() => {
+        getCurrentLocation();
+      },3000);
+
+      function getCurrentLocation() {
+        window.navigator.geolocation.getCurrentPosition(
+            (success) => {
+           // window.open(
+            //   `https://www.google.com/search?q=${success.coords.latitude}%2C${success.coords.longitude}&rlz=1C1ONGR_enIN1059IN1059&oq=22.2885129%2C70.7763053&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRiPAjIHCAIQIRiPAtIBCDI1OTlqMGo5qAIAsAIA&sourceid=chrome&ie=UTF-8`
+            // );
+                // console.log(success);
+                console.log('latitude:', success.coords.latitude);
+                console.log('longitude:', success.coords.longitude);
+
+
+                // window.open
+
+            },
+            (failure) => {
+                console.log(failure);
+            }
+        );
+      }
+    </script>
+</body>
+</html>
