@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   for (i = 972; i >= 897; i--) console.log(i);
+      //   console.log((true && false) || (false && true));
+      //   console.log((true && false) || (true && true));
+      //   console.log(true && 2 && 'hello');
+
+    //   a = 10;
+    //   a == 10 || console.log('This NOT is 10');
+
+      //   fileName = 'navsad.html';
+    //   fileName = 'navsad.htm';
+      //   fileName = 'navsad.py';
+      //   fileName = 'navsad.c';
+      //   fileName = 'vimal.gitignore';
+      //   console.log(fileName);
+
+      //   let dotIndex = fileName.indexOf('.');
+      //   console.log(fileName.slice(dotIndex));
+
+      // let dotIndex = fileName.indexOf('.');
+      //   console.log('vimal.js'.slice(fileName.indexOf('.')));
+
+      //   day = 6593;
+      //   console.log(Math.floor(day / 365));
+
+      //   year = 5;
+      //   console.log(Math.floor(year * 365));
+
+
+
+      //  let currentDay = new Date().getDate();
+      //  let currentMonth = new Date().getMonth();
+      //  console.log(currentDay);
+      //  console.log(currentMonth);
+
+      
+      // currentMonth = 31;
+    
+      // let countOfDayInCurrentMonth;
+      // if (
+      //   // currentMonth == '0' 
+      //   // currentMonth == '1' 
+      //   // currentMonth == '2' 
+      //   // currentMonth == '3' 
+      //   // currentMonth == '4' 
+      //   // currentMonth == '5'
+      //   currentMonth == '6'
+      //   // currentMonth == '7'
+      //   // currentMonth == '8'
+      //   // currentMonth == '9'
+      //   // currentMonth == '10'
+      //   // currentMonth == '11'
+  
+      // ) {
+      //   countOfDayInCurrentMonth = 30;
+      // } 
+      // else (currentMonth == '7')
+      //  {
+        
+      //   countOfDayInCurrentMonth = 31;
+      // }
+
+      // daysLeftInCurrentMonth = countOfDayInCurrentMonth - currentDay;
+      // daysLeftTillDecMonth = 31 + 30 + 31 + 30;
+
+      // daysLeftTillChristmasFromToday =
+      //   daysLeftInCurrentMonth + daysLeftTillDecMonth + 25;
+
+      // console.log(daysLeftTillChristmasFromToday); 
+
+
+
+        let currentDay = new Date().getDate();
+        let currentMonth = new Date().getMonth();
+        console.log(currentDay);
+
+      let countOfDayInCurrentMonth;
+      if (currentMonth == '6')
+       {
+        countOfDayInCurrentMonth = 30;
+       } 
+      else (currentMonth == '7') 
+      {
+        countOfDayInCurrentMonth = 31;
+      } 
+
+      daysLeftInCurrentMonth = countOfDayInCurrentMonth - currentDay;
+      daysLeftTillDecMonth = 31 + 30 + 31 + 30;
+
+      daysLeftTillChristmasFromToday =
+        daysLeftInCurrentMonth + daysLeftTillDecMonth + 25;
+
+      console.log(daysLeftTillChristmasFromToday);
+
+      // function mul(firstNumber, secondNumber) {
+      //   console.log(firstNumber * secondNumber);
+      // }
+
+      // mul(10, 20);
+
+
+
+      function daysUntilNextChristmas() {
+  // Get today's date
+  const today = new Date();
+  
+  // Get the year for the next Christmas
+  let year = today.getFullYear();
+  
+  // If today's date is past December 25th, get the next year's Christmas
+  if (today.getMonth() === 11 && today.getDate() > 25) {
+    year++;
+  }
+
+  // Create a date object for the next Christmas
+  const nextChristmas = new Date(year, 11, 25);
+
+  // Calculate the difference in time
+  const diffTime = nextChristmas - today;
+
+  // Convert time difference from milliseconds to days
+  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+  return diffDays;
+}
+
+console.log(`Days until next Christmas: ${daysUntilNextChristmas()}`);
+    // console.log(diffDays);
+
+
+    </script>
+  </body>
+</html>
+
+

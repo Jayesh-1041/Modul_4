@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation Example</title>
+    <style>
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="main-containt">
+        <div class="sign-up"> Sign Up</div>
+        <form action="">
+
+            <label for="username">Username :</label><br>
+            <!-- <div class="username"> -->
+            <!-- <input type="text" name="username" id="usernameError" class="username" placeholder="Username"><br><br> -->
+            <!-- </div> -->
+
+            <!-- <label for="email">Email-id :</label><br> -->
+            <!-- <div class="email"> -->
+            <!-- <input type="email" id="emailError" class="email" placeholder="Emaile-id"><br><br> -->
+            <!-- </div> -->
+
+            <!-- <label for="Password">Password :</label><br> -->
+            <!-- <div class="password"> -->
+            <!-- <input type="password" name="Password" id="passwordError" class="password" placeholder="Password"><br><br> -->
+            <!-- </div> -->
+
+            <!-- <label for="conform-password">conform-password :</label><br> -->
+            <!-- <div class="conform-password"> -->
+            <!-- <input type="password" name="conform-password id="conformPasswordError" class="conformPassword" placeholder="Reenter your password"><br><br> -->
+            <!-- </div> -->
+
+            <!-- <button class="btn" id="button">SIGN UP</button> -->
+        <!-- </form> -->
+    <!-- </div> --> -->
+     
+    <script>
+        function validateForm() {
+            // Clear previous errors
+            document.getElementById('usernameError').textContent = '';
+            document.getElementById('emailError').textContent = '';
+            document.getElementById('passwordError').textContent = '';
+            document.getElementById('confirmPasswordError').textContent = '';
+
+            // Get form values
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            let isValid = true;
+
+            // Validate username
+            if (username.trim() === '') {
+                document.getElementById('usernameError').textContent = 'Username is required';
+                isValid = false;
+            } else if (username.length < 3 || username.length > 25) {
+                document.getElementById('usernameError').textContent = 'Username must be between 3 and 25 characters';
+                isValid = false;
+            }
+
+            // Validate email
+            // if (email.trim() === '') {
+            //     document.getElementById('emailError').textContent = 'Email is required';
+            //     isValid = false;
+            // } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            //     document.getElementById('emailError').textContent = 'Invalid email format';
+            //     isValid = false;
+            // }
+
+            let button = document.getElementById('button').addEventListener('click', (event) => {
+            event.preventDefault()
+            let emailValue = document.getElementById('email').value;
+            checkEmail(emailValue)
+        });
+
+        function checkEmail(emailName) {
+
+            console.log(
+                emailName.includes('@') && emailName.includes('.') && !emailName.includes('@.') && emailName.slice(0, emailName.includes('@')) != '' && emailName.slice(emailName.indexOf('.') + 1) != ''
+            );
+        }
+
+
+            // Validate password
+            const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
+            if (password.trim() === '') {
+                document.getElementById('passwordError').textContent = 'Password is required';
+                isValid = false;
+            } else if (!passwordPattern.test(password)) {
+                document.getElementById('passwordError').textContent = 'Password must be at least 8 characters and include at least 1 lower case character, 1 upper case character, 1 number, and 1 special character';
+                isValid = false;
+            }
+
+            // Validate confirm password
+            if (confirmPassword.trim() === '') {
+                document.getElementById('confirmPasswordError').textContent = 'Please confirm your password';
+                isValid = false;
+            } else if (confirmPassword !== password) {
+                document.getElementById('confirmPasswordError').textContent = 'Passwords do not match';
+                isValid = false;
+            }
+
+            if (isValid) {
+                alert('Form submitted successfully!');
+                // Optionally, submit the form here
+                // document.getElementById('registrationForm').submit();
+            }
+        }
+
+        function validateForm() {
+
+let username = document.getElementById('username').value;
+let email = document.getElementById('email').value;
+let password = document.getElementById('password').value;
+let confirmPassword = document.getElementById('confirmPassword').value;
+
+let isValid = true;
+
+// Username
+ if (username.length < 3 || username.length > 25) {
+    document.getElementById('usernameError').textContent = 'Username must be between 3 and 25 characters';
+    isValid = false;
+}
+
+// if (username.trim() === '') {
+//     document.getElementById('usernameError').textContent = 'Username is required';
+//     isValid = false;
+// } else if (username.length < 3 || username.length > 25) {
+//     document.getElementById('usernameError').textContent = 'Username must be between 3 and 25 characters';
+//     isValid = false;
+// }
+
+// Email
+if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    document.getElementById('emailError').textContent = 'Invalid email format';
+    isValid = false;
+}
+// if (email.trim() === '') {
+//     document.getElementById('emailError').textContent = 'Email is required';
+//     isValid = false;
+// } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+//     document.getElementById('emailError').textContent = 'Invalid email format';
+//     isValid = false;
+// }
+
+
+// Password
+const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
+if (!passwordPattern.test(password)) {
+    document.getElementById('passwordError').textContent = 'Password must be at least 8 characters and include at least 1 lower case character, 1 upper case character, 1 number, and 1 special character';
+    isValid = false;
+}
+
+// const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
+// if (password.trim() === '') {
+//     document.getElementById('passwordError').textContent = 'Password is required';
+//     isValid = false;
+// } else if (!passwordPattern.test(password)) {
+//     document.getElementById('passwordError').textContent = 'Password must be at least 8 characters and include at least 1 lower case character, 1 upper case character, 1 number, and 1 special character';
+//     isValid = false;
+// }
+
+// Confirm password
+if (confirmPassword !== password) {
+    document.getElementById('confirmPasswordError').textContent = 'Passwords do not match';
+    isValid = false;
+}
+// if (confirmPassword.trim() === '') {
+//     document.getElementById('confirmPasswordError').textContent = 'Please confirm your password';
+//     isValid = false;
+// } else if (confirmPassword !== password) {
+//     document.getElementById('confirmPasswordError').textContent = 'Passwords do not match';
+//     isValid = false;
+// }
+
+if (isValid) {
+    alert('Form submitted successfully!');
+   
+}
+}
+
+    </script>
+</body>
+</html>
